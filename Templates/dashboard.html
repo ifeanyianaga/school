@@ -1,0 +1,417 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - Omiknow</title>
+    {% include "extensions-css.html" %}
+    {% include "extensions-js.html" %}
+<style>
+    .circle{
+       height: 5vh;
+    }
+
+    .border{
+        border:1px solid black;
+        margin: 1em 1em;
+       
+    }
+    .tutor-parent{
+        display: flex;
+        align-items: stretch;
+    }
+    .find-tutor{
+       
+        margin: 0 2em 0 0;
+       padding:0.5em;
+    }
+    .find-tutor> img{
+        width: 20%;
+    }
+    .find-button{
+       
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40%;
+    }
+    
+    .grid.container {
+  margin-top: 5em;
+}
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+
+	
+	
+}
+
+
+    @media screen and (max-width:480px) {
+        .tutor-parent{
+        display: block;
+        margin: 1em 0 2em 0;
+           }
+
+           .find-button{
+     
+        display: block;
+        width: 100%;
+        margin: 2em 0 1em 0;
+          }
+
+          .find-button > button{
+            display:block;
+            width: 100%;
+          }
+        
+    }
+</style>
+  </head>
+  <body>
+     {% include "navbar.html" %}
+
+     <div class="container overflow-hidden gutter">
+        <div class="row gy-5">
+          <div class="col-6">
+            <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+          <div class="col-6">
+            <div class="p-3 border bg-light">Custom column padding</div>
+          </div>
+         </div>
+      </div>
+
+
+     <section class="features">
+        <div class="container">
+        <div class="ui segment">
+            <label>Users' name</label>
+            <div class="ui top attached tabular menu red inverted">
+                <a class="active item" data-tab="dashboard">Dashboard</a>
+                <a class="item" data-tab="account">My account</a>
+                <a class="item" data-tab="messages">Messages</a>
+                
+            </div>
+            <div class="ui bottom attached active tab segment" data-tab="dashboard">
+                <div class="container">
+                    <div class="row mt-4">
+                        <div class="col-sm bg-danger-subtle rounded pt-4 pb-4 m-2">
+                    <div class="parent">
+                    <div class="child">
+                        <div>
+                            <i class="fa-sharp fa-solid fa-user circle"></i>
+                            
+                            <h3 class="sup">Epenetus</h3>
+                            <hr>
+                            <p class="sub">Verified profile <i class="ms-2 fa-solid fa-check-to-slot"></i></p>
+                        </div>
+
+                    </div>
+                    </div>
+                        </div>
+                        <div class="col-sm bg-danger-subtle rounded pt-4 pb-4 m-2">
+                            <div class="parent">
+                                <div class="child">
+                                    <div>
+                                    
+                                        <h4 class="sup">Lesson requests</h4>
+                                        <hr class="red ui">
+                                        <div class="container overflow-hidden gutter">
+                                            <div class="row gy-5">
+                                              <div class="col-6">
+                                                <div class="p-3 border bg-light">Custom column padding</div>
+                                              </div>
+            
+                                             </div>
+                                          </div>
+                                          <div class="tutor-parent">
+
+                                          
+                            
+                                         <div class="find-tutor">
+                                            <img src="{% static 'images/find.svg' %}">
+                                            <i class="sub">No pending lesson requests</i>
+                                         </div>
+                                    
+                                       <div class="find-button">
+                                        <button class="ui red inverted button sub">Find a tutor</button>
+                                       </div>
+                                    </div>
+                                    </div>
+            
+                                </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui bottom attached  tab segment" data-tab="account">
+               <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 mt-2">
+                      <div class="segment ui">
+                      <form class="ui form">
+                        <h4 class="ui dividing header">Personal Information</h4>
+                        <div class="field">
+                          <label>Name</label>
+                          <div class="two fields">
+                            <div class="field">
+                              <input type="text" name="firstname" placeholder="First Name">
+                            </div>
+                            <div class="field">
+                              <input type="text" name="lastname" placeholder="Last Name">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="field">
+                         <label>Email &amp; Username</label>
+                          <div class="fields">
+                            <div class="eight wide field">
+                              <input type="email" name="email" placeholder="Email Address">
+                            </div>
+                            <div class="eight wide field">
+                              <input type="text" name="username" placeholder="Username">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="two fields">
+                          <div class="field">
+                            <label>Gender</label>
+                            <select class="ui dropdown" name="gender">
+                              <option value="">Gender</option>
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                            </select>
+                          </div>
+                          <div class="field">
+                            <label>Phone Number</label>
+                            <div class="ui fluid search selection dropdown">
+                              <input type="tel" name="phone" placeholder="Phone Number">
+                          
+                          
+                             </div>
+                          </div>
+                        </div>
+                   
+                       <div class="ui segment">
+                          <div class="field">
+                            <div class="ui toggle checkbox">
+                              <input type="checkbox" name="terms" tabindex="0" class="hidden">
+                              <label>Agree to terms &amp; conditions </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="ui primary submit button">Submit</div>
+                        <div class="ui error message"></div>
+                      </form>
+                      </div>
+                        </div>
+                    <div class="col-sm-6 mt-2">
+                      <div class="ui placeholder segment">
+                      <div class="ui icon header">
+                      
+                        <i class="user icon"></i>
+                        No documents are listed for this Student.
+                      </div>
+
+                      <div class="ui middle aligned center aligned">
+                        <div class="ui  segment mb-2">
+                     <input type="file" (change)="fileEvent($event)" class="inputfile" id="embedpollfileinput" />
+                      
+                   <label for="embedpollfileinput" class="ui  red  button">
+                          <i class="ui upload icon"></i> 
+                          Upload ID
+                        </label>
+                               
+                        
+                        </div>
+                        
+                      </div>
+                    </div> 
+                  </div>
+                    <div class="col-sm-6  mt-2"> <div class="ui placeholder segment">
+                      <div class="ui icon header">
+                      
+                        <i class="user icon"></i>
+                        Upload your picture here
+                      </div>
+
+                      <div class="ui middle aligned center aligned ">
+                        <div class="ui  segment mb-2">
+                     <input type="file" (change)="fileEvent($event)" class="inputfile" id="embedpollfileinput" />
+                      
+                   <label for="embedpollfileinput" class="ui  red  button">
+                          <i class="ui upload icon"></i> 
+                          Upload image
+                        </label>
+                               
+                        
+                        </div>
+                        
+                      </div>
+                    </div></div>
+                    <div class="col-sm-6 mt-2"><div class="ui placeholder segment">
+                      <div class="ui icon header">
+                        <i class="lock icon"></i>
+                        Change Password
+                      </div>
+                      <div class="ui primary button password"  data-bs-toggle="modal" data-bs-target="#ChangePassowordModal">
+                        Change Password</div>
+                    </div></div>
+                </div>
+               </div>
+            </div>
+            <div class="ui bottom attached  tab segment" data-tab="messages">
+                Messages contents
+            </div>
+            
+        </div>    
+           
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+     </section>
+    {% include 'password-modal.html' %}
+
+    <script>
+ 
+
+
+
+
+
+$('.menu .item').tab();
+$('.ui .dropdown').dropdown();
+$('.ui .checkbox').checkbox();
+
+
+
+
+
+
+  $('.ui.form')
+  .form({
+    fields: {
+      firstname: {
+        identifier: 'firstname',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your First name'
+          }
+        ]
+      },
+      lastname: {
+        identifier: 'lastname',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your Last name'
+          }
+        ]
+      },
+      username: {
+        identifier: 'username',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your Username'
+          }
+        ]
+      },
+     email: {
+        identifier: 'email',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter your Email address'
+          }
+        ]
+      },
+      gender: {
+        identifier: 'gender',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please select a gender'
+          }
+        ]
+      },
+
+      phone:{
+        identifier:'phone',
+        rules:[
+          {
+            type:'empty',
+            prompt:'Please enter your phone number'
+          }
+        ]
+      },
+
+     
+      oldpassword: {
+        identifier: 'oldpassword',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a password'
+          },
+          {
+            type   : 'minLength[6]',
+            prompt : 'Your password must be at least {ruleValue} characters'
+          }
+        ]
+      },
+      newpassword: {
+        identifier: 'newpassword',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a password'
+          },
+          {
+            type   : 'minLength[6]',
+            prompt : 'Your password must be at least {ruleValue} characters'
+          }
+        ]
+      },
+      confirmpassword: {
+        identifier: 'confirmpassword',
+        rules: [
+          {
+            type   : 'empty',
+            prompt : 'Please enter a password'
+          },
+          {
+            type   : 'minLength[6]',
+            prompt : 'Your password must be at least {ruleValue} characters'
+          }
+        ]
+      },
+      terms: {
+        identifier: 'terms',
+        rules: [
+          {
+            type   : 'checked',
+            prompt : 'You must agree to the terms and conditions'
+          }
+        ]
+      }
+    }
+  })
+;
+    </script>
+  </body>
+</html>

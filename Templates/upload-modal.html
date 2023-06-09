@@ -1,0 +1,39 @@
+{% load static %}
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="uploadstaticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="uploadstaticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title sup" id="uploadstaticBackdropLabel">Upload Materials</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="ui inverted segment">
+            <div class="ui inverted form">
+              <div class="two fields">
+                <div class="field">
+                  <label class="sub">Upload Material</label>
+                  <input  type="file">
+                </div>
+               
+              </div>
+              <div class="inline field">
+                <div class="ui checkbox">
+                  <input type="checkbox" tabindex="0" class="hidden">
+                  <label>I agree to the terms and conditions</label>
+                </div>
+              </div>
+              <div class="ui submit button sub">Upload </div>
+            </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

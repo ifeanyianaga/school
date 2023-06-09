@@ -1,0 +1,55 @@
+<nav class="navbar navbar-dark bg-dark fixed-top ">
+  <div class="container-fluid">
+    <a class="navbar-brand sup" href="{% url 'home' %}">Omiknow</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title sup" id="offcanvasDarkNavbarLabel">Omiknow</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link links active brown" aria-current="page" href="{% url 'home' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link links" href="{% url 'tutoring' %}">Tutoring Jobs</a>
+          </li>
+          <li class="nav-item">
+            <a type="button"  class="nav-link links" data-bs-toggle="modal" data-bs-target="#loginstaticBackdrop">Login</a>
+          </li>
+      
+          <li class="nav-item">
+            <a class="nav-link links" href="{% url 'signup' %}">Signup</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link links" data-bs-toggle="modal" data-bs-target="#uploadstaticBackdrop">Upload Materials</a>
+          </li>
+         
+            </ul>
+
+        <header class="hero-search-filter">
+          <div class="hero-search-filter-content">
+            <img class="hero-search-filter-logo" src="https://placehold.it/160x80" alt="" />
+            <form class="hero-search-filter-form" action="">
+              <label for="findtext">Subject</label>
+              <input id="findtext" class="hero-search-filter-form-find" type="text" />
+              <div class="divider">&nbsp;</div>
+             
+              <label for="findlocate">Address</label>
+              <input id="findlocate" class="hero-search-filter-form-near" type="text"/>
+              <button class="button"><i class="fa fa-search"></i></button>
+            </form>
+          
+          </div>
+        </header>
+        
+        
+ 
+</div>
+      </div>
+    </div>
+  </div>
+</nav>

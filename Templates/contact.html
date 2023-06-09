@@ -1,0 +1,237 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>To contact us</title>
+    {% include 'extensions-css.html' %}
+    <style>
+        .lilac{
+background: #fae1f1 !important;
+
+        }
+.parent{
+    height: 40vh;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+
+}
+.child{
+    height: 40vh;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    flex: 1;
+    margin: 0 1em 0 1em;
+
+}
+
+.custom-container{
+   display:flex;
+   background-color: #fae1f1 !important;
+  border-radius: 5px;
+}
+
+
+
+@media screen and (max-width:480px) {
+    .mobile{
+        background-color: #fae1f1 !important;
+     }
+     
+    .custom-container{
+        display:block;
+        
+       
+    }
+    .parent{
+        width: 100%;
+        margin-bottom: 1em;
+          
+    }
+    .child{
+        width:100%;
+        margin:1em;
+
+    }
+    .child > p{
+        font-size: 32px;
+    }
+    
+}
+
+
+    </style>
+</head>
+  <body>
+  {% include 'navbar.html' %}
+
+  <div class="container overflow-hidden gutter">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+     </div>
+  </div>
+ 
+
+  <section class="features mobile">
+    <div class="container custom-container" >
+        
+
+        <div class="parent">
+            <div class="child">
+                <div>
+                    <i class="fa-solid fa-bolt-lightning"></i>
+                    <h4 class="sup">Speed</h4>
+                    <p class="sub">Fast as lightning, we'll answer you within the day</p>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child">
+                <div>
+                    <i class="fa-solid fa-shield-virus"></i>
+                    <h4 class="sup">Trust</h4>
+                    <p class="sub">We are committed to finding you the ideal tutory</p>
+                </div>
+            </div>
+        </div>
+        <div class="parent">
+            <div class="child">
+                <div>
+                    <i class="fa-solid fa-calendar-days "></i>
+                    <h4 class="sup">Availability</h4>
+                    <p class="sub">We are available Monday to Friday</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+  </section>
+
+
+<div class="container overflow-hidden gutter">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+     
+    </div>
+  </div>
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card text-center lilac rounded">
+                   
+                    <div class="card-body lilac">
+                      <h3 class="card-title sup">Found a glitch? Don't panic!</h3>
+                      <p class="card-text sub">Do you have a particular problem that needs to be solved quickly?
+                        The answer can probably be found in our help center designed to make your life easier!</p>
+                      <a href="#" class="btn links btn-primary">Discover the help center</a>
+                    </div>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container overflow-hidden gutter">
+    <div class="row gy-5">
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+      <div class="col-6">
+        <div class="p-3 border bg-light">Custom column padding</div>
+      </div>
+     
+    </div>
+  </div>
+<section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card text-center">
+                   
+                    <div class="card-body rounded">
+                      <h3 class="card-title sup">Discover the big Omiknow family</h3>
+                      <p class="card-text sub">
+                        Passionate, Dreamy, Utopian, Sharers, Serious, Polyglots and always ready for adventure. Omiknow is made up of nearly 150 employees in Paris, here to help you share your passion in 39 countries and 16 languages.</p>
+                      <a href="#" class="btn links btn-primary">Discover the Omiknow family</a>
+                    </div>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+</section>
+     
+{% include 'footer.html' %}
+
+{% include 'login_modal.html' %}
+
+{% include 'upload-modal.html' %}
+{% include 'extensions-js.html' %}
+
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
